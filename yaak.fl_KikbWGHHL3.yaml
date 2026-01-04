@@ -1,0 +1,13 @@
+type: folder
+model: folder
+id: fl_KikbWGHHL3
+createdAt: 2026-01-03T08:11:31.074432340
+updatedAt: 2026-01-03T08:11:31.074432450
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_6f5CBhWZYt
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: books
+sortPriority: 40.0

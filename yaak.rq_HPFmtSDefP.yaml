@@ -1,0 +1,45 @@
+type: http_request
+model: http_request
+id: rq_HPFmtSDefP
+createdAt: 2026-01-03T08:11:31.069697227
+updatedAt: 2026-01-03T15:22:56.237242353
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_cd3YF8aonm
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: |-
+  Retrieves detailed profile information for a specific user.
+
+  #### **Path Parameters**
+
+  | Parameter | Type | Required | Description |
+  | :--- | :--- | :--- | :--- |
+  | id | UUID | Yes | The ID of the user to retrieve. |
+
+  #### **Success Response**
+
+  **200 OK**
+
+  ```json
+  {
+    "id": "uuid-string",
+    "firstName": "John",
+    "username": "johndoe",
+    "email": "john@example.com",
+    "createdAt": "2024-03-20T10:00:00.000Z",
+    "updatedAt": "2024-03-21T10:00:00.000Z",
+    "isVerified": true,
+    "isActive": true
+  }
+headers: []
+method: GET
+name: Get user details
+sortPriority: 34.0
+url: ${[baseUrl]}/admin/users/:id
+urlParameters:
+- enabled: true
+  name: :id
+  value: <string>
+  id: null

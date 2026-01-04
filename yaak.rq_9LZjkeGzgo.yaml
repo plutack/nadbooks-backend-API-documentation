@@ -1,0 +1,48 @@
+type: http_request
+model: http_request
+id: rq_9LZjkeGzgo
+createdAt: 2026-01-04T05:41:34.358202193
+updatedAt: 2026-01-04T05:47:44.064995389
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_qQLUyAwnNn
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: |-
+  Retrieve detailed information for a specific public book.
+
+  #### **Path Parameters**
+
+  | Parameter | Type | Required | Description |
+  | :--- | :--- | :--- | :--- |
+  | `id` | `string` (UUID) | Yes | The unique identifier of the book. |
+
+  #### **Success Response**
+
+  **200 OK**
+
+  ```json
+  {
+    "id": "uuid-string",
+    "title": "The Great Novel",
+    "bookURL": "[https://storage.example.com/books/novel.pdf](https://storage.example.com/books/novel.pdf)",
+    "bookCoverURL": "[https://storage.example.com/covers/novel.jpg](https://storage.example.com/covers/novel.jpg)",
+    "genre": "FICTION",
+    "price": 19.99,
+    "pageCount": 350,
+    "isMature": false,
+    "authorId": "author-uuid",
+    "dateAuthored": "2024-01-01T00:00:00.000Z",
+    "dateUploaded": "2024-01-01T00:00:00.000Z"
+  }
+headers: []
+method: GET
+name: Get book details
+sortPriority: 14.333333333333334
+url: ${[baseUrl]}/admin/books/:id
+urlParameters:
+- enabled: true
+  name: :id
+  value: <uuid>
+  id: null

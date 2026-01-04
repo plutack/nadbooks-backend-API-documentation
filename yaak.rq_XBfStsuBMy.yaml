@@ -1,0 +1,45 @@
+type: http_request
+model: http_request
+id: rq_XBfStsuBMy
+createdAt: 2026-01-03T08:11:31.071030961
+updatedAt: 2026-01-03T17:06:54.989990016
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_cd3YF8aonm
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "role": "<string>"
+    }
+bodyType: application/json
+description: |-
+  ### **Change User Role**
+
+  Assign a new role to a user.
+
+
+      - `id`: The UUID of the user whose role you want to change.
+
+  #### **Request Body**
+
+  ```json
+  {
+    "role": "ADMIN"
+  }
+
+  Returns 204
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: PATCH
+name: Change user role
+sortPriority: 3.777777777777778
+url: ${[baseUrl]}/admin/users/role/:id
+urlParameters:
+- enabled: true
+  name: :id
+  value: <string>
+  id: null

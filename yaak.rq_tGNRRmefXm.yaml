@@ -1,0 +1,29 @@
+type: http_request
+model: http_request
+id: rq_tGNRRmefXm
+createdAt: 2026-01-03T08:11:31.070148844
+updatedAt: 2026-01-03T16:01:32.355080978
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_cd3YF8aonm
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: |-
+  Enable a previously deactivated user account.
+
+
+  - **Path Parameters**:
+      - `id`: The UUID of the user to activate.
+
+  Returns 204
+headers: []
+method: PATCH
+name: Activate user
+sortPriority: 11.333333333333334
+url: ${[baseUrl]}/admin/users/activate/:id
+urlParameters:
+- enabled: true
+  name: :id
+  value: <string>
+  id: null

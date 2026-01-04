@@ -1,0 +1,29 @@
+type: http_request
+model: http_request
+id: rq_ZjxHbyK6Cf
+createdAt: 2026-01-03T08:11:31.068265338
+updatedAt: 2026-01-03T12:58:50.572593979
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_M4KUCsUaGD
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "bookIds": [
+        "<uuid>",
+        "<uuid>"
+      ]
+    }
+bodyType: application/json
+description: "### Get My Orders\n\nFetch all orders placed by the current user. Supports pagination.\n\n\n#### Query Parameters\n\n| Field   | Type      | Required | Description                              |\n| :------ | :-------- | :------- | :--------------------------------------- |\n| `limit` | `integer` | No       | Number of items to return (default: 20). |\n| `skip`  | `integer` | No       | Number of items to skip (default: 0).    |\n\n#### Response Example\n\n```json\n[\n  {\n    \"id\": \"order-uuid-456\",\n    \"userId\": \"user-uuid-123\",\n    \"status\": \"PAID\",\n    \"totalAmount\": 2500,\n    \"createdAt\": \"2024-01-03T12:00:00.000Z\",\n    \"books\": [\n      {\n        \"id\": \"line-item-1\",\n        \"orderId\": \"order-uuid-456\",\n        \"bookId\": \"book-id-1\",\n        \"price\": 1500,        \n        \"title\": \"Atomic Habits\",\n        \"authorId\": \"author-uuid-999\",\n        \"bookCoverURL\": \"[https://example.com/cover.jpg](https://example.com/cover.jpg)\",\n        \"pageCount\": 320\n      }\n    ]\n  }\n]"
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Create a new order
+sortPriority: 2000.0
+url: ${[baseUrl]}/orders
+urlParameters: []

@@ -1,0 +1,18 @@
+type: http_request
+model: http_request
+id: rq_uNpSme9xxG
+createdAt: 2026-01-03T08:11:31.067542233
+updatedAt: 2026-01-03T10:43:28.578465010
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_qQLUyAwnNn
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: "Deletes an existing book uploaded by an authenticated user.(this should not even exist at auser level only admin should be able to undelete a book. Note: we are now using a soft delete approach) \n\nReturns 204\n\n"
+headers: []
+method: GET
+name: Get my deleted books
+sortPriority: 17.0
+url: ${[baseUrl]}/books/me/deleted
+urlParameters: []

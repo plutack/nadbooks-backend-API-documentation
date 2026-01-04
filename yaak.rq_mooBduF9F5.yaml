@@ -1,0 +1,55 @@
+type: http_request
+model: http_request
+id: rq_mooBduF9F5
+createdAt: 2026-01-03T08:11:31.069103574
+updatedAt: 2026-01-03T13:18:22.665535953
+workspaceId: wk_aWSGCfNc2u
+folderId: null
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "amount": "<number>",
+      "method": "<string>",
+      "accountNumber": "<string>",
+      "accountName": "<string>",
+      "bankCode": "<string>",
+      "walletAddress": "<string>"
+    }
+bodyType: application/json
+description: |2-
+
+  Withdraw funds to a bank (Paystack) or crypto wallet.
+
+
+  ##### Body Parameters
+
+  | Field           | Type     | Required | Description                |
+  | :-------------- | :------- | :------- | :------------------------- |
+  | `amount`        | `number` | Yes      | Amount to withdraw.        |
+  | `method`        | `string` | Yes      | `PAYSTACK` or `CRYPTO`.    |
+  | `accountNumber` | `string` | Cond.    | **Required for PAYSTACK**. |
+  | `accountName`   | `string` | Cond.    | **Required for PAYSTACK**. |
+  | `bankCode`      | `string` | Cond.    | **Required for PAYSTACK**. |
+  | `walletAddress` | `string` | Cond.    | **Required for CRYPTO**.   |
+
+  ##### Response Example
+
+  ```json
+  {
+    "status": true,
+    "message": "Transfer initiated successfully",
+    "data": { "reference": "TRF-123", "status": "pending" },
+    "errors": null
+  }
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Initiate a withdrawal
+sortPriority: 28.0
+url: ${[baseUrl]}/withdrawal
+urlParameters: []

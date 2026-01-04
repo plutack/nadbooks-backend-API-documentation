@@ -1,0 +1,54 @@
+type: http_request
+model: http_request
+id: rq_yTT9KDTQ5k
+createdAt: 2026-01-03T08:11:31.068770916
+updatedAt: 2026-01-03T13:14:04.022907756
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_T4MtiwMhZT
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "amount": "<number>",
+      "method": "<string>",
+      "metadata": "<object>",
+      "email": "<string>",
+      "buyerAddress": "<string>",
+      "hash": "<string>"
+    }
+bodyType: application/json
+description: |2-
+
+  Top up the user's wallet.
+
+
+  ##### Body Parameters
+  | Field | Type | Required | Description |
+  | :--- | :--- | :--- | :--- |
+  | `amount` | `number` | Yes | Amount to deposit. |
+  | `method` | `string` | Yes | `PAYSTACK` or `CRYPTO`. |
+  | `email` | `string` | Cond. | **Required if method is PAYSTACK**. |
+  | `buyerAddress` | `string` | Cond. | **Required if method is CRYPTO**. |
+  | `hash` | `string` | Cond. | **Required if method is CRYPTO**. Transaction hash. |
+  | `metadata` | `object` | No | Optional metadata. |
+
+  ##### Response Example
+  ```json
+  {
+    "id": "tx-uuid-1",
+    "status": "PENDING",
+    "amount": 5000,
+    "paymentMethod": "PAYSTACK",
+    "reference": "TRX-123456"
+  }
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Initiate a deposit
+sortPriority: 26.0
+url: ${[baseUrl]}/payments/deposit
+urlParameters: []

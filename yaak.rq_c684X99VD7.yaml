@@ -1,0 +1,31 @@
+type: http_request
+model: http_request
+id: rq_c684X99VD7
+createdAt: 2026-01-03T08:11:31.070702215
+updatedAt: 2026-01-03T17:21:11.950076609
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_cd3YF8aonm
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: |2-
+
+  Manually verify a user's account status.
+
+  - **Path Parameters**:
+      - `id`: The UUID of the user to verify.
+
+  #### **Success Response**
+
+  **204 No Content**
+headers: []
+method: PATCH
+name: Verify user
+sortPriority: 23.925925925925927
+url: ${[baseUrl]}/admin/users/verify/:id
+urlParameters:
+- enabled: true
+  name: :id
+  value: <string>
+  id: null

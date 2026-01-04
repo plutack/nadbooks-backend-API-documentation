@@ -1,0 +1,53 @@
+type: http_request
+model: http_request
+id: rq_SUFvj2XJ4z
+createdAt: 2026-01-03T08:11:31.065671177
+updatedAt: 2026-01-03T08:33:41.836071864
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_9FBADt3LvS
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: |
+  Returns the profile of the authenticated user.
+
+  Response Object
+  ```json
+  {
+    "statusCode": 200,
+    "message": "Success",
+    "errors": null,
+    "data": {
+      "id": "9a5f8891-9d5b-445c-b7bb-f1933c264bc0",
+      "firstName": "ross",
+      "lastName": "west",
+      "username": "Unique_Carroll64",
+      "email": "salakotalut@gmail.com",
+      "Wallet": {
+        "balance": "0"
+      }
+    }
+  }
+  ```
+  ---
+
+  ```json
+  {
+    "statusCode": 401,
+    "message": "unauthorizedException",
+    "errors": [
+      "invalid signature"
+    ]
+  }
+  ```
+headers:
+- enabled: true
+  name: Accept
+  value: application/json
+  id: null
+method: GET
+name: Get current user profile
+sortPriority: 5.0
+url: ${[baseUrl]}/me
+urlParameters: []

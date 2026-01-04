@@ -1,0 +1,26 @@
+type: http_request
+model: http_request
+id: rq_mYxvQ8oJUw
+createdAt: 2026-01-03T08:11:31.067271412
+updatedAt: 2026-01-03T10:41:37.194020271
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_6L6h7JtEkT
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: |+
+  Restore already deleted book uploaded by an authenticated user. (this should be an admin only action)
+
+  Returns 204
+
+headers: []
+method: POST
+name: Restore a deleted book
+sortPriority: 16.0
+url: ${[baseUrl]}/books/:id/restore
+urlParameters:
+- enabled: true
+  name: :id
+  value: <uuid>
+  id: null

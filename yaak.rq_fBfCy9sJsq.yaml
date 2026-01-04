@@ -1,0 +1,18 @@
+type: http_request
+model: http_request
+id: rq_fBfCy9sJsq
+createdAt: 2026-01-03T08:11:31.067994925
+updatedAt: 2026-01-03T11:57:13.552977611
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_M4KUCsUaGD
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: '[object Object]'
+headers: []
+method: GET
+name: Get my orders
+sortPriority: 0.0
+url: ${[baseUrl]}/orders
+urlParameters: []

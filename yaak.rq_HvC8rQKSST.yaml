@@ -1,0 +1,57 @@
+type: http_request
+model: http_request
+id: rq_HvC8rQKSST
+createdAt: 2026-01-03T08:11:31.066185435
+updatedAt: 2026-01-03T10:33:07.994123400
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_nBdcUgyNio
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: |-
+  Fetch a specific transaction by its reference.
+  - Admin: Can fetch any transaction.
+  - Regular users: Can fetch only their own transactions.
+
+  | Field       | Type   | Required | Description                              |
+  | ----------- | ------ | -------- | ---------------------------------------- |
+  | `reference` | string | yes      | The unique reference of the transaction. |
+
+  #### Response Example
+
+  ```json
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "type": "ORDER",
+    "amount": "2500.00",
+    "paymentMethod": "WALLET",
+    "senderWalletId": "wallet-7362-8172",
+    "recipientWalletId": null,
+    "reference": "TRX-ORDER-999",
+    "hash": null,
+    "status": "SUCCESS",
+    "description": "Book Purchase",
+    "reason": null,
+    "metadata": null,
+    "providerResponse": null,
+    "createdAt": "2024-01-03T11:00:00.000Z",
+    "updatedAt": "2024-01-03T11:00:00.000Z",
+    "orderId": "order-uuid-456",
+    "senderWallet": {
+      "id": "wallet-7362-8172",
+      "userId": "user-uuid-123"
+    }
+  }
+
+  ```
+headers: []
+method: GET
+name: Get transaction by reference
+sortPriority: 9.0
+url: ${[baseUrl]}/transactions/:reference
+urlParameters:
+- enabled: true
+  name: :reference
+  value: <string>
+  id: null

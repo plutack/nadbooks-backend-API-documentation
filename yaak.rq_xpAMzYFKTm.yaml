@@ -1,0 +1,59 @@
+type: http_request
+model: http_request
+id: rq_xpAMzYFKTm
+createdAt: 2026-01-03T08:11:31.065234249
+updatedAt: 2026-01-03T08:34:15.989872998
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_Sn8urEhUTK
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "email": "<email>",
+      "password": "<string>"
+    }
+bodyType: application/json
+description: |-
+  Authenticates a user using their email and password.
+
+
+  Request type
+
+  ```json
+  {
+    "email": "salakotalut@gmail.com",
+    "password":  "Password@123"
+  }
+  ```
+
+  Response Type
+
+  ```json
+  {
+    "statusCode": 201,
+    "message": "Success",
+    "errors": null,
+    "data": {
+      "accessToken": <access token>,
+      "user": {
+        "id": "9a5f8891-9d5b-445c-b7bb-f1933c264bc0",
+        "username": "Unique_Carroll64",
+        "firstName": "ross",
+        "lastName": "west",
+        "email": "salakotalut@gmail.com",
+        "role": "USER"
+      }
+    }
+  }
+  ```
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Login user
+sortPriority: 2.0
+url: ${[baseUrl]}/auth/login
+urlParameters: []

@@ -1,0 +1,29 @@
+type: http_request
+model: http_request
+id: rq_raQ8oxoKuz
+createdAt: 2026-01-03T08:11:31.070426334
+updatedAt: 2026-01-03T17:13:50.943064956
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_cd3YF8aonm
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: |-
+  disable an activated user account.
+
+
+  - **Path Parameters**:
+      - `id`: The UUID of the user to activate.
+
+  Returns 204
+headers: []
+method: PATCH
+name: Deactivate user
+sortPriority: 18.88888888888889
+url: ${[baseUrl]}/admin/users/deactivate/:id
+urlParameters:
+- enabled: true
+  name: :id
+  value: <string>
+  id: null

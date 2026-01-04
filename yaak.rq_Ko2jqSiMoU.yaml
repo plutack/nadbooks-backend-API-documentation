@@ -1,0 +1,31 @@
+type: http_request
+model: http_request
+id: rq_Ko2jqSiMoU
+createdAt: 2026-01-03T08:11:31.065796676
+updatedAt: 2026-01-03T08:33:51.357170220
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_9FBADt3LvS
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: |-
+  Get all books bookmarked by the authenticated user.
+
+
+  Response Object
+
+  ```json
+  {
+    "statusCode": 200,
+    "message": "Success",
+    "errors": null,
+    "data": []
+  }
+  ```
+headers: []
+method: GET
+name: Get current user bookmarks
+sortPriority: 6.0
+url: ${[baseUrl]}/me/bookmarks
+urlParameters: []

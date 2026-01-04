@@ -1,0 +1,44 @@
+type: http_request
+model: http_request
+id: rq_YoUnE3frvg
+createdAt: 2026-01-03T08:11:31.071883841
+updatedAt: 2026-01-04T06:10:30.153535004
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_yZ6CmXp3zY
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "genre": "<string>",
+      "isMature": "<boolean>"
+    }
+bodyType: application/json
+description: |-
+  Update a book’s editable fields.
+
+  **Path Parameters**:
+    - `id`: The UUID of the book to update.
+
+  #### **Request Body**
+
+  ```json
+  {
+
+    "genre": "FICTION",            // optional
+    "isMature": false              // optional
+  }
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: PATCH
+name: Update book
+sortPriority: 44.0
+url: ${[baseUrl]}/admin/books/:id
+urlParameters:
+- enabled: true
+  name: :id
+  value: <uuid>
+  id: null

@@ -1,0 +1,64 @@
+type: http_request
+model: http_request
+id: rq_w9p7r7hzkj
+createdAt: 2026-01-03T08:11:31.065932044
+updatedAt: 2026-01-03T08:35:09.725445356
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_nBdcUgyNio
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: |-
+  Fetch all transactions in the system of the current user.
+
+
+  #### Query Parameters
+
+  | Field    | Type     | Required | Description                                                         |
+  | :------- | :------- | :------- | :------------------------------------------------------------------ |
+  | `type`   | `string` | No       | Filter by transaction type (e.g., `DEPOSIT`, `WITHDRAWAL`, `ORDER`) |
+  | `status` | `string` | No       | Filter by transaction status (e.g., `SUCCESS`, `PENDING`, `FAILED`) |
+
+  #### Response Example
+
+  ```json
+  [
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440000",
+      "type": "ORDER",
+      "amount": "2500.00",
+      "paymentMethod": "WALLET",
+      "senderWalletId": "wallet-7362-8172",
+      "recipientWalletId": null,
+      "reference": "TRX-ORDER-999",
+      "hash": null,
+      "status": "SUCCESS",
+      "description": "Book Purchase",
+      "reason": null,
+      "metadata": null,
+      "providerResponse": null,
+      "createdAt": "2024-01-03T11:00:00.000Z",
+      "updatedAt": "2024-01-03T11:00:00.000Z",
+      "orderId": "order-uuid-456",
+      "senderWallet": {
+        "id": "wallet-7362-8172",
+        "userId": "user-uuid-123"
+      }
+    }
+  ]
+  ```
+headers: []
+method: GET
+name: Get current user transactions
+sortPriority: 8.0
+url: ${[baseUrl]}/transactions
+urlParameters:
+- enabled: true
+  name: type
+  value: <string>
+  id: null
+- enabled: true
+  name: status
+  value: <string>
+  id: null

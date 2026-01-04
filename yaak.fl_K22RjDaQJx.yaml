@@ -1,0 +1,13 @@
+type: folder
+model: folder
+id: fl_K22RjDaQJx
+createdAt: 2026-01-03T08:11:31.073894773
+updatedAt: 2026-01-03T08:11:31.073894872
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_qQLUyAwnNn
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: bookmarks/{id}
+sortPriority: 18.0

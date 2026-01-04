@@ -1,0 +1,55 @@
+type: http_request
+model: http_request
+id: rq_r3zJbWHhML
+createdAt: 2026-01-03T08:11:31.066648380
+updatedAt: 2026-01-04T05:55:11.949152707
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_qQLUyAwnNn
+authentication: {}
+authenticationType: null
+body:
+  form:
+  - enabled: true
+    id: 6ujkCSjhtu
+    name: title
+    value: <string>
+  - enabled: true
+    id: drqTdbnRYC
+    name: genre
+    value: <string>
+  - enabled: true
+    id: fmgEHH0uaG
+    name: price
+    value: <number>
+  - enabled: true
+    id: Tpyyk7XSV9
+    name: isMature
+    value: <boolean>
+  - enabled: true
+    id: w6ySIsIUvT
+    name: dateAuthored
+    value: <dateTime>
+  - enabled: true
+    id: fiSh0ZAXjb
+    name: book
+    value: ''
+  - enabled: true
+    id: KP0kJN5Cfw
+    name: bookCover
+    value: ''
+  - enabled: true
+    id: dhNcCvfNRY
+    name: ''
+    value: ''
+bodyType: multipart/form-data
+description: '[object Object]'
+headers:
+- enabled: true
+  name: Content-Type
+  value: multipart/form-data
+  id: null
+method: POST
+name: Upload a new book (Author)
+sortPriority: 12.0
+url: ${[baseUrl]}/books
+urlParameters: []

@@ -1,0 +1,22 @@
+type: http_request
+model: http_request
+id: rq_diP72KitfB
+createdAt: 2026-01-03T08:11:31.067071244
+updatedAt: 2026-01-03T10:40:35.445341276
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_6L6h7JtEkT
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: "Deletes an existing book uploaded by an authenticated user. \n\nReturns 204\n\n"
+headers: []
+method: DELETE
+name: Delete a book
+sortPriority: 15.0
+url: ${[baseUrl]}/books/:id
+urlParameters:
+- enabled: true
+  name: :id
+  value: <uuid>
+  id: null

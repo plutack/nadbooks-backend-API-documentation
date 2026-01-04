@@ -1,0 +1,70 @@
+type: http_request
+model: http_request
+id: rq_iJcmwCFoqg
+createdAt: 2026-01-03T08:11:31.066836252
+updatedAt: 2026-01-04T05:54:53.405057868
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_6L6h7JtEkT
+authentication: {}
+authenticationType: null
+body:
+  form:
+  - enabled: true
+    name: title
+    value: <string>
+  - enabled: true
+    name: genre
+    value: <string>
+  - enabled: true
+    name: price
+    value: <number>
+  - enabled: true
+    name: isMature
+    value: <boolean>
+  - enabled: true
+    name: pageCount
+    value: <number>
+  - enabled: true
+    name: dateAuthored
+    value: <dateTime>
+  - enabled: true
+    name: book
+    value: ''
+  - enabled: true
+    name: bookCover
+    value: ''
+bodyType: multipart/form-data
+description: |+
+  Updates an existing book uploaded by the authenticated user.
+  Only the author of the book is allowed to update it.
+
+  Returns 204 status code.
+
+  ## Request Type
+  Multipart/form-Data
+
+  Fields
+  | Field        | Type    | Required | Description                                                                  |
+  | ------------ | ------- | -------- | ---------------------------------------------------------------------------- |
+  | title        | string  | No       | The title of the book.                                                       |
+  | genre        | string  | No       | The genre of the book.                                                       |
+  | price        | number  | No       | The cost of the book (in BOOKS).                                             |
+  | isMature     | boolean | No       | Whether the book contains mature content.                                    |
+  | dateAuthored | Date    | No       | Date the author considers the book released. Must be in `YYYY-MM-DD` format. |
+  | book      | File | No       | Replaces the existing book file.   |
+  | bookCover | File | No       | Replaces the existing cover image. |
+
+headers:
+- enabled: true
+  name: Content-Type
+  value: multipart/form-data
+  id: null
+method: PATCH
+name: Update a book
+sortPriority: 14.0
+url: ${[baseUrl]}/books/:id
+urlParameters:
+- enabled: true
+  name: :id
+  value: <uuid>
+  id: null

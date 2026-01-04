@@ -1,0 +1,26 @@
+type: http_request
+model: http_request
+id: rq_kTREsVg69k
+createdAt: 2026-01-03T08:11:31.065510493
+updatedAt: 2026-01-03T08:11:31.065510715
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_Sn8urEhUTK
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "token": "<string>"
+    }
+bodyType: application/json
+description: '[object Object]'
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Google Authentication
+sortPriority: 3.0
+url: ${[baseUrl]}/auth/google
+urlParameters: []

@@ -1,0 +1,22 @@
+type: http_request
+model: http_request
+id: rq_p4NzZZFyVS
+createdAt: 2026-01-03T08:11:31.067699563
+updatedAt: 2026-01-03T11:54:42.162103739
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_K22RjDaQJx
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: "Add book to the authenticated user bookmark \n\nResponse Object\n\n```json\n{\n  \"statusCode\": 201,\n  \"message\": \"Success\",\n  \"errors\": null,\n  \"data\": {\n    \"id\": 15,\n    \"userId\": \"0b0308cc-6321-47a9-a4c4-a17e82df0c77\",\n    \"bookId\": \"01c8bf55-9c1b-4f80-9f9e-4e8578a408f4\",\n    \"createdAt\": \"2025-11-14T19:28:06.975Z\"\n  }\n}\n```\n"
+headers: []
+method: POST
+name: Bookmark a book
+sortPriority: 19.0
+url: ${[baseUrl]}/books/bookmarks/:id
+urlParameters:
+- enabled: true
+  name: :id
+  value: <uuid>
+  id: null

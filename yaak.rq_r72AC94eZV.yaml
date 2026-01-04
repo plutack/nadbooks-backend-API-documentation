@@ -1,0 +1,49 @@
+type: http_request
+model: http_request
+id: rq_r72AC94eZV
+createdAt: 2026-01-03T08:11:31.068606741
+updatedAt: 2026-01-03T13:00:28.120057307
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_M4KUCsUaGD
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: |-
+  ### Get Order Details
+
+  Fetch a specific order by ID.
+
+  #### Response Example
+
+  ```json
+  {
+    "id": "order-uuid-456",
+    "userId": "user-uuid-123",
+    "status": "PAID",
+    "totalAmount": 2500,
+    "createdAt": "2024-01-03T12:00:00.000Z",
+    "updatedAt": "2024-01-03T12:00:00.000Z",
+    "books": [
+      {
+        "id": "line-item-1",
+        "orderId": "order-uuid-456",
+        "bookId": "book-id-1",
+        "price": 1500,
+        "title": "Atomic Habits",
+        "authorId": "author-uuid-999",
+        "bookCoverURL": "[https://example.com/cover.jpg](https://example.com/cover.jpg)",
+        "pageCount": 320
+      }
+    ]
+  }
+headers: []
+method: GET
+name: Get order details
+sortPriority: 1000.0
+url: ${[baseUrl]}/orders/:id
+urlParameters:
+- enabled: true
+  name: :id
+  value: <uuid>
+  id: null

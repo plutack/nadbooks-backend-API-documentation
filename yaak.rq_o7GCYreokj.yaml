@@ -1,0 +1,26 @@
+type: http_request
+model: http_request
+id: rq_o7GCYreokj
+createdAt: 2026-01-03T08:11:31.071346847
+updatedAt: 2026-01-04T05:34:23.218368077
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_KikbWGHHL3
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: "Fetch a list of books with optional filtering and pagination. This endpoint supports filtering by genre, price range, and maturity rating. Results are paginated using limit and skip.\n\n## Query Parameters\n| Parameter  | Type    | Required | Default | Description |\n| ---------- | ---------- | ------------------- | ------- | ---------------------------------------------------------------------------------------------------------- |\n| `limit`    | number  | no       | `20`    | Maximum number of books to return.                                                                         |\n| `skip`     | number  | no       | `0`     | Number of books to skip. Used for pagination. For example, page 3 with 20 per page → `skip = 40`.          |\n| `genre`    | string  | no       | —       | Filter books by genre (e.g., `Fantasy`, `Crime`).                                                          |\n| `minPrice` | number  | no       | —       | Return books with price **≥ minPrice**.                                                                    |\n| `maxPrice` | number  | no       | —       | Return books with price **≤ maxPrice**.                                                                    |\n| `isMature` | boolean | no       | —       | Filter by maturity rating. `true` = mature content, `false` = non-mature. Must be a boolean, not a string. |\n\n| `incluceHidden` | boolean | no       | —       | Filter by isVisble., `false` (only an admin can set this to true)|\n\n\nResponse Object \n\n```\n{\n  \"statusCode\": 200,\n  \"message\": \"Success\",\n  \"errors\": null,\n  \"data\": []\n}\n```"
+headers: []
+method: GET
+name: List all books (including hidden)
+sortPriority: 41.0
+url: ${[baseUrl]}/admin/books
+urlParameters:
+- enabled: true
+  name: limit
+  value: <integer>
+  id: null
+- enabled: true
+  name: skip
+  value: <integer>
+  id: null

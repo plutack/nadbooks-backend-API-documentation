@@ -1,0 +1,22 @@
+type: http_request
+model: http_request
+id: rq_ftoV3qJhqX
+createdAt: 2026-01-03T08:11:31.072786784
+updatedAt: 2026-01-03T15:19:41.882429407
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_6f5CBhWZYt
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: ''
+headers: []
+method: GET
+name: List all orders
+sortPriority: 47.0
+url: ${[baseUrl]}/admin/orders
+urlParameters:
+- enabled: true
+  name: userId
+  value: <string>
+  id: null

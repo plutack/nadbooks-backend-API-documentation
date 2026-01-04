@@ -1,0 +1,50 @@
+type: http_request
+model: http_request
+id: rq_V3FCg6LS8A
+createdAt: 2026-01-03T08:11:31.069465498
+updatedAt: 2026-01-03T15:21:13.054403090
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_SEqF8Bwtyk
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: |-
+  Retrieves a paginated list of all users on the platform.
+
+  #### **Query Parameters**
+
+  | Parameter | Type | Required | Description |
+  | :--- | :--- | :--- | :--- |
+  | `limit` | Number | No | Pagination limit (default 10) |
+  | `skip` | Number | No | Pagination offset (default 0) |
+
+  #### **Success Response**
+
+  **200 OK**
+
+  ```json
+  [
+    {
+      "id": "uuid-string",
+      "firstName": "John",
+      "createdAt": "2024-03-20T10:00:00.000Z",
+      "updatedAt": "2024-03-21T10:00:00.000Z",
+      "isVerified": true
+    }
+  ]
+  ```
+headers: []
+method: GET
+name: List all users
+sortPriority: 32.0
+url: ${[baseUrl]}/admin/users
+urlParameters:
+- enabled: true
+  name: limit
+  value: <integer>
+  id: null
+- enabled: true
+  name: skip
+  value: <integer>
+  id: null

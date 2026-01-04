@@ -1,0 +1,89 @@
+type: http_request
+model: http_request
+id: rq_7d6j3HvqYt
+createdAt: 2026-01-03T08:11:31.069257621
+updatedAt: 2026-01-03T15:16:17.596490565
+workspaceId: wk_aWSGCfNc2u
+folderId: null
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "paymentMethod": "<string>",
+      "bookIds": [
+        "<uuid>",
+        "<uuid>"
+      ],
+      "orderId": "<uuid>"
+    }
+bodyType: application/json
+description: |-
+  ### **Checkout / Order Payment**
+
+  Initiate a payment for an order. This endpoint handles creating a new order (if valid book IDs are provided) or paying for an existing order.
+
+  - **URL**: `/checkout/:method`
+  - **Method**: `POST`
+  - **Auth required**: Yes (Bearer Token)
+  - **Path Parameters**:
+      - `method`: The payment method to use. One of: `WALLET`, `PAYSTACK`, `CRYPTO` (Case-insensitive).
+
+  #### **Request Body**
+
+  | Field     | Type        | Required | Description |
+  | :-------- | :---------- | :------- | :---------- |
+  | `orderId` | `UUID`      | No*      | The ID of an existing order to pay for. |
+  | `bookIds` | `UUID[]`    | No*      | Array of Book IDs to create a new order for. |
+
+  *\*Note: You must provide either `orderId` OR `bookIds`. providing both will default to checking the orderId logic first.*
+
+  #### **Example Request (Paystack)**
+
+  **POST** `/checkout/paystack`
+
+  ```json
+  {
+    "bookIds": ["123e4567-e89b-12d3-a456-426614174000"]
+  }
+  ```
+
+  Success Responses
+  1. Wallet Payment (Immediate Success)
+
+  ```json
+  {
+    "orderId": "uuid-string",
+    "transactionId": "uuid-string",
+    "status": "PAID"
+  }
+  ```
+  2. Paystack Payment (Initiated)
+
+  ```json
+  {
+    "status": "PENDING",
+    "reference": "unique-payment-ref",
+    "paymentUrl": "[https://checkout.paystack.com/](https://checkout.paystack.com/)..."
+  }
+  ```
+  3. Crypto Payment (Wallet Connect) Use these details to initiate a transaction on the frontend.
+  ```json
+  {
+    "status": "PENDING",
+    "reference": "unique-payment-ref",
+    "destinationAddress": "0xValletAddress...",
+    "amount": 5000,
+    "currency": "MON"
+  }
+  ```
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Create checkout for order or books
+sortPriority: 29.0
+url: ${[baseUrl]}/checkout
+urlParameters: []

@@ -1,0 +1,13 @@
+type: folder
+model: folder
+id: fl_6f5CBhWZYt
+createdAt: 2026-01-03T08:11:31.074136403
+updatedAt: 2026-01-03T08:11:31.074136479
+workspaceId: wk_aWSGCfNc2u
+folderId: null
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: admin
+sortPriority: 30.0

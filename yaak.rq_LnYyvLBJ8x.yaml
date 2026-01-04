@@ -1,0 +1,30 @@
+type: http_request
+model: http_request
+id: rq_LnYyvLBJ8x
+createdAt: 2026-01-03T08:11:31.072494443
+updatedAt: 2026-01-03T08:11:31.072494753
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_6f5CBhWZYt
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: '[object Object]'
+headers: []
+method: GET
+name: List all transactions
+sortPriority: 46.0
+url: ${[baseUrl]}/admin/transactions
+urlParameters:
+- enabled: true
+  name: userId
+  value: <string>
+  id: null
+- enabled: true
+  name: type
+  value: <string>
+  id: null
+- enabled: true
+  name: status
+  value: <string>
+  id: null

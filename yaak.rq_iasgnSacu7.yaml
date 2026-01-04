@@ -1,0 +1,30 @@
+type: http_request
+model: http_request
+id: rq_iasgnSacu7
+createdAt: 2026-01-03T08:11:31.072131909
+updatedAt: 2026-01-04T05:37:45.106151364
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_yZ6CmXp3zY
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: |-
+  Ban and unpublish a book. This action hides the book from the platform.
+
+  - **Path Parameters**:
+      - `id`: The UUID of the book to ban.
+
+  #### **Success Response**
+
+  **204 No Content**
+headers: []
+method: PATCH
+name: Ban/Unpublish book
+sortPriority: 14.333333333333334
+url: ${[baseUrl]}/admin/books/ban/:id
+urlParameters:
+- enabled: true
+  name: :id
+  value: <uuid>
+  id: null

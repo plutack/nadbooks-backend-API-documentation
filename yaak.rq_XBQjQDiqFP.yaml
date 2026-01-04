@@ -1,0 +1,57 @@
+type: http_request
+model: http_request
+id: rq_XBQjQDiqFP
+createdAt: 2026-01-03T08:11:31.068955204
+updatedAt: 2026-01-03T13:12:40.838376985
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_T4MtiwMhZT
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: |-
+  #### Verify Deposit
+
+  Verify a deposit status (e.g., after a Paystack callback or manual check).
+
+  - **Endpoint**: `GET /payments/verify/:method`
+  - **Access**: Public / Authenticated (depends on guarding)
+
+  ##### Path Parameters
+
+  | Field    | Type     | Required | Description            |
+  | :------- | :------- | :------- | :--------------------- |
+  | `method` | `string` | Yes      | `PAYSTACK` or `CRYPTO` (can be in lower case) |
+
+  ##### Query Parameters
+
+  | Field       | Type     | Required | Description              |
+  | :---------- | :------- | :------- | :----------------------- |
+  | `reference` | `string` | No       | Paystack reference.      |
+  | `hash`      | `string` | No       | Crypto transaction hash. |
+headers: []
+method: GET
+name: Verify a deposit (Paystack/Crypto)
+sortPriority: 27.0
+url: ${[baseUrl]}/payments/verify:method
+urlParameters:
+- enabled: true
+  name: method
+  value: <string>
+  id: null
+- enabled: true
+  name: reference
+  value: <string>
+  id: null
+- enabled: true
+  name: hash
+  value: <string>
+  id: null
+- enabled: true
+  name: buyerAddress
+  value: <string>
+  id: null
+- enabled: true
+  name: transferedAmount
+  value: <number>
+  id: null

@@ -1,0 +1,22 @@
+type: http_request
+model: http_request
+id: rq_VW3BZpAFjs
+createdAt: 2026-01-03T08:11:31.067844235
+updatedAt: 2026-01-03T11:56:35.507183404
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_K22RjDaQJx
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: Removes a book from user bookmark
+headers: []
+method: DELETE
+name: Remove bookmark
+sortPriority: 20.0
+url: ${[baseUrl]}/books/bookmarks/:id
+urlParameters:
+- enabled: true
+  name: :id
+  value: <uuid>
+  id: null

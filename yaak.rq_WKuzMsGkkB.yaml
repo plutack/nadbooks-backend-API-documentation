@@ -1,0 +1,65 @@
+type: http_request
+model: http_request
+id: rq_WKuzMsGkkB
+createdAt: 2026-01-03T08:11:31.064772801
+updatedAt: 2026-01-03T08:34:08.632334231
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_Sn8urEhUTK
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "firstName": "<string>",
+      "lastName": "<string>",
+      "email": "<email>",
+      "username": "<string>",
+      "password": "<string>"
+    }
+bodyType: application/json
+description: |-
+  create a new user
+
+
+  Request Type
+  ```json
+  {
+    "firstName":"Talut",
+    "lastName": "Salako",
+    "username": "plutack",
+    "email": "plutack@nobody.live",
+    "password":  "Password@123"
+  }
+
+  ```
+
+  Response Type
+
+  ```json
+  {
+    "statusCode": 201,
+    "message": "Success",
+    "errors": null,
+    "data": {
+      "id": "ec0d8138-dca2-47fc-b30c-1b0a43edaeb2",
+      "firstName": "sunny",
+      "lastName": "heaney",
+      "email": "Hillard_Nikolaus@gmail.com",
+      "username": "Rosamond42",
+      "role": "USER",
+      "Wallet": {
+        "balance": "0"
+      }
+    }
+  }
+  ```
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Register a new user
+sortPriority: 1.0
+url: ${[baseUrl]}/auth/register
+urlParameters: []
