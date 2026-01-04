@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_YoUnE3frvg
 createdAt: 2026-01-03T08:11:31.071883841
-updatedAt: 2026-01-04T06:10:30.153535004
+updatedAt: 2026-01-04T06:38:50.963700956
 workspaceId: wk_aWSGCfNc2u
 folderId: fl_yZ6CmXp3zY
 authentication: {}
@@ -19,6 +19,7 @@ description: |-
 
   **Path Parameters**:
     - `id`: The UUID of the book to update.
+
 
   #### **Request Body**
 
