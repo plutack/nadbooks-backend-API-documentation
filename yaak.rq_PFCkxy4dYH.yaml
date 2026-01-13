@@ -1,0 +1,26 @@
+type: http_request
+model: http_request
+id: rq_PFCkxy4dYH
+createdAt: 2026-01-13T08:35:11.373626399
+updatedAt: 2026-01-13T08:42:39.305969272
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_Sn8urEhUTK
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "refreshToken": "18880719-96e1-4804-8912-81ec8791c63e"
+    }
+bodyType: application/json
+description: "Rotates the tokens of a previously authenticated user \n\nRequest type\n\n```json\n{\n  \"refreshToken\": <refresh token>\n}\n```\n\nResponse Type\n\n```json\n{\n  \"statusCode\": 201,\n  \"message\": \"Success\",\n  \"errors\": null,\n  \"data\": {\n    \"accessToken\": <access token>,\n    \"refreshToken\": <refresh token>\n  }\n}\n```"
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: kRECKXjBdS
+method: POST
+name: Refresh Access Token
+sortPriority: 2.0
+url: ${[ baseUrl ]}/auth/refresh
+urlParameters: []
