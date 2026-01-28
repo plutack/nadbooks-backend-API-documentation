@@ -2,16 +2,16 @@ type: http_request
 model: http_request
 id: rq_xpAMzYFKTm
 createdAt: 2026-01-03T08:11:31.065234249
-updatedAt: 2026-01-03T08:34:15.989872998
+updatedAt: 2026-01-23T11:53:17.764614171
 workspaceId: wk_aWSGCfNc2u
 folderId: fl_Sn8urEhUTK
 authentication: {}
-authenticationType: null
+authenticationType: none
 body:
   text: |-
     {
-      "email": "<email>",
-      "password": "<string>"
+      "email": "salakotalut@gmail.com",
+      "password": "RandoPass@123"
     }
 bodyType: application/json
 description: |-
@@ -36,6 +36,7 @@ description: |-
     "errors": null,
     "data": {
       "accessToken": <access token>,
+      "refreshToken": <refresh token>
       "user": {
         "id": "9a5f8891-9d5b-445c-b7bb-f1933c264bc0",
         "username": "Unique_Carroll64",

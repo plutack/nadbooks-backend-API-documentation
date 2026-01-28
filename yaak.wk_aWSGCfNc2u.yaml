@@ -2,7 +2,7 @@ type: workspace
 model: workspace
 id: wk_aWSGCfNc2u
 createdAt: 2026-01-03T08:11:31.064445937
-updatedAt: 2026-01-04T06:12:19.880909319
+updatedAt: 2026-01-24T17:46:04.719489499
 authentication:
   disabled: false
   token: ${[bearerToken]}
@@ -14,3 +14,4 @@ encryptionKeyChallenge: eUE0azNuQwE8Hb2JHBIu38PSqKpfPAzrypo+3ihMXEfQt3piANTrfU8N
 settingValidateCertificates: true
 settingFollowRedirects: true
 settingRequestTimeout: 0
+settingDnsOverrides: []

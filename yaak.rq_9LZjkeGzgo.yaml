@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_9LZjkeGzgo
 createdAt: 2026-01-04T05:41:34.358202193
-updatedAt: 2026-01-04T05:47:44.064995389
+updatedAt: 2026-01-28T04:56:22.270081017
 workspaceId: wk_aWSGCfNc2u
 folderId: fl_qQLUyAwnNn
 authentication: {}
@@ -40,7 +40,7 @@ headers: []
 method: GET
 name: Get book details
 sortPriority: 14.333333333333334
-url: ${[baseUrl]}/admin/books/:id
+url: ${[baseUrl]}/books/:id
 urlParameters:
 - enabled: true
   name: :id

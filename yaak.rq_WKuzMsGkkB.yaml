@@ -2,19 +2,19 @@ type: http_request
 model: http_request
 id: rq_WKuzMsGkkB
 createdAt: 2026-01-03T08:11:31.064772801
-updatedAt: 2026-01-03T08:34:08.632334231
+updatedAt: 2026-01-11T08:49:23.829269495
 workspaceId: wk_aWSGCfNc2u
 folderId: fl_Sn8urEhUTK
 authentication: {}
-authenticationType: null
+authenticationType: none
 body:
   text: |-
     {
-      "firstName": "<string>",
-      "lastName": "<string>",
-      "email": "<email>",
-      "username": "<string>",
-      "password": "<string>"
+      "firstName": "korede",
+      "lastName": "salako",
+      "email": "salakotalut@gmail.com",
+      "username": "tulips",
+      "password": "Dynamite@123"
     }
 bodyType: application/json
 description: |-
