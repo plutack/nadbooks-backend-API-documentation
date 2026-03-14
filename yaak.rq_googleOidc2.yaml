@@ -1,0 +1,25 @@
+type: http_request
+model: http_request
+id: rq_googleOidc2
+createdAt: 2026-03-14T12:00:00
+updatedAt: 2026-03-14T12:00:00
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_Sn8urEhUTK
+authentication: {}
+authenticationType: none
+body: {}
+bodyType: null
+description: |-
+  Google OIDC callback. Handles the redirect from Google after authentication.
+
+  #### Note:
+  This endpoint is called by Google's OAuth redirect. Frontend should configure this as the callback URL in Google Cloud Console.
+
+  #### Response:
+  Returns JWT tokens (accessToken, refreshToken) and user object.
+headers: []
+method: GET
+name: Google OIDC - Callback
+sortPriority: 2.5
+url: ${[baseUrl]}/auth/google/callback
+urlParameters: []

@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_xpAMzYFKTm
 createdAt: 2026-01-03T08:11:31.065234249
-updatedAt: 2026-01-23T11:53:17.764614171
+updatedAt: 2026-03-14T13:03:52.348460111
 workspaceId: wk_aWSGCfNc2u
 folderId: fl_Sn8urEhUTK
 authentication: {}

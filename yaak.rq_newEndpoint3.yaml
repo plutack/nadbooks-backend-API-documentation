@@ -1,0 +1,45 @@
+type: http_request
+model: http_request
+id: rq_newEndpoint3
+createdAt: 2026-03-14T12:00:00
+updatedAt: 2026-03-14T12:00:00
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_9FBADt3LvS
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "password": "<string>"
+    }
+bodyType: application/json
+description: |-
+  Set a password for users who logged in via social (no password). This allows them to also login with email/password.
+
+  #### Request Body
+
+  | Field     | Type   | Required | Description                           |
+  | :-------- | :----- | :------- | :----------------------------------- |
+  | `password` | `string` | Yes    | Password (min 8 chars, uppercase, lowercase, number, special char). |
+
+  #### Response Example
+
+  ```json
+  {
+    "message": "Password set successfully"
+  }
+  ```
+
+  #### Error Responses
+
+  - 400: If user already has a password.
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Set password (social users)
+sortPriority: 4.75
+url: ${[baseUrl]}/me/password
+urlParameters: []

@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_WKuzMsGkkB
 createdAt: 2026-01-03T08:11:31.064772801
-updatedAt: 2026-01-11T08:49:23.829269495
+updatedAt: 2026-02-28T17:12:42.326220996
 workspaceId: wk_aWSGCfNc2u
 folderId: fl_Sn8urEhUTK
 authentication: {}
@@ -12,7 +12,7 @@ body:
     {
       "firstName": "korede",
       "lastName": "salako",
-      "email": "salakotalut@gmail.com",
+      "email": "salakotalut1@gmail.com",
       "username": "tulips",
       "password": "Dynamite@123"
     }

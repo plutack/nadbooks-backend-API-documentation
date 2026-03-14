@@ -1,0 +1,25 @@
+type: http_request
+model: http_request
+id: rq_googleOidc1
+createdAt: 2026-03-14T12:00:00
+updatedAt: 2026-03-14T12:00:00
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_Sn8urEhUTK
+authentication: {}
+authenticationType: none
+body: {}
+bodyType: null
+description: |-
+  Initiate Google OIDC OAuth flow. Redirects user to Google for authentication.
+
+  #### Flow:
+  1. Frontend redirects user to this endpoint
+  2. User authenticates with Google
+  3. Google redirects to `/auth/google/callback`
+  4. Backend exchanges code for tokens and returns JWT
+headers: []
+method: GET
+name: Google OIDC - Initiate
+sortPriority: 3.0
+url: ${[baseUrl]}/auth/google
+urlParameters: []

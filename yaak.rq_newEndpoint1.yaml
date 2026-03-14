@@ -1,0 +1,49 @@
+type: http_request
+model: http_request
+id: rq_newEndpoint1
+createdAt: 2026-03-14T12:00:00
+updatedAt: 2026-03-14T12:00:00
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_9FBADt3LvS
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "firstName": "<string>",
+      "lastName": "<string>",
+      "username": "<string>"
+    }
+bodyType: application/json
+description: |-
+  Update the authenticated user's profile.
+
+  #### Request Body
+
+  | Field      | Type   | Required | Description              |
+  | :--------- | :----- | :------- | :----------------------- |
+  | `firstName` | `string` | No      | User's first name.       |
+  | `lastName`  | `string` | No      | User's last name.        |
+  | `username`  | `string` | No      | User's username.         |
+
+  #### Response Example
+
+  ```json
+  {
+    "id": "uuid-string",
+    "firstName": "John",
+    "lastName": "Doe",
+    "username": "johndoe",
+    "email": "john@example.com"
+  }
+  ```
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: PATCH
+name: Update user profile
+sortPriority: 4.5
+url: ${[baseUrl]}/me
+urlParameters: []

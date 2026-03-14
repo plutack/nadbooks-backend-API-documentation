@@ -1,0 +1,55 @@
+type: http_request
+model: http_request
+id: rq_newEndpoint2
+createdAt: 2026-03-14T12:00:00
+updatedAt: 2026-03-14T13:03:30.888007974
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_9FBADt3LvS
+authentication:
+  token: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RVoydDZLZ2pXbkpQUS9sNTRGR2lMZnJpTEdLcnpjeEY4MTVaSjVhNmx2WXlsdFRMR1p1bGI5L3pEbk1pYjREQ2Q5akFNOElTcjI4TDZLR2JCeEd4OVc2ajNqS0lCMWRKVlZKY2ZobHVRRFNOTEZ0OW9XbUtXaWNNNXpDVjREWEtucjhRc1k0ZDkzZjlXZVE3Tk1SQUpWMkpDWUVUVE1kclNrb21ZR0tjQzVtbmlmTWw5aTJWWGxTbVpXM3JVL3ZvN2xlV3c5YnJqSk5qalRKczJIdXpOOVhBWTBXemxBT09jT0FuTXJJUENIcHI5bEM2K0Fob24zMTYxWmRSc3M1cndNTm9SaC9kQmtoZzFhUmNwajVlRm1ucTFZRytmOEFsekpSdFRDdE1LZ0VjS3NEN2ovZDFieDVNb2dMaHdvaERMdlpXWlFBdm9DT2NaaEIwcmxEeWxKSUJnWkJsYnFmaDcvOG93SS9VSE1jQ3ppNGxFbTg1WTlHR3BnNklEaFpMeDR0ci8xN3FiNnhxVi9nQ0NIWGlFaXI2cVlxQmpWaXlLWVhRTnJjTFRCTXdTVlNkdW5qSjg9') ]}
+authenticationType: bearer
+body:
+  text: |-
+    {
+      "currentPassword": "Password@1234",
+      "newPassword": "RandoPass@123"
+    }
+bodyType: application/json
+description: |-
+  Change the authenticated user's password. Requires current password verification. Returns new tokens.
+
+  #### Request Body
+
+  | Field            | Type   | Required | Description                           |
+  | :--------------- | :----- | :------- | :----------------------------------- |
+  | `currentPassword` | `string` | Yes     | User's current password.             |
+  | `newPassword`    | `string` | Yes     | New password (min 8 chars, uppercase, lowercase, number, special char). |
+
+  #### Response Example
+
+  ```json
+  {
+    "accessToken": "eyJ...",
+    "refreshToken": "uuid...",
+    "user": {
+      "id": "uuid",
+      "username": "johndoe",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john@example.com",
+      "role": "USER"
+    }
+  }
+  ```
+
+  **Note:** Store the new tokens in localStorage after a successful response.
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: PATCH
+name: Change password
+sortPriority: 4.25
+url: ${[baseUrl]}/me/password
+urlParameters: []
