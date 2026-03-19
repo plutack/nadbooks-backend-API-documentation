@@ -1,0 +1,59 @@
+type: http_request
+model: http_request
+id: rq_googleOneTap
+createdAt: 2026-03-19T12:00:00
+updatedAt: 2026-03-19T12:25:23.322843001
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_Sn8urEhUTK
+authentication: {}
+authenticationType: none
+body:
+  text: |-
+    {
+      "token": "<GOOGLE_ID_TOKEN>"
+    }
+bodyType: application/json
+description: |-
+  Authenticate with a Google One Tap ID token (credential).
+
+  #### Flow:
+  1. Frontend: `window.google.accounts.id.initialize()` + `window.google.accounts.id.prompt()` or `renderButton()`
+  2. Google returns `credential` in callback
+  3. Send `{ token: credential }` here
+
+  #### Backend:
+  - Verifies token via `google-auth-library`
+  - Creates user if new, updates `googleId` if exists
+  - Issues own JWT (`accessToken`, `refreshToken`)
+
+  #### Request Body
+  | Field  | Type   | Required | Description                    |
+  | :----- | :----- | :------- | :---------------------------- |
+  | `token` | `string` | Yes     | Google ID token (credential) |
+
+  #### Response Example
+  ```json
+  {
+    "accessToken": "eyJ...",
+    "refreshToken": "uuid...",
+    "user": {
+      "id": "uuid",
+      "username": "johndoe",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john@example.com",
+      "role": "USER",
+      "googleId": "google-sub-id"
+    }
+  }
+  ```
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Google Login
+sortPriority: 3.0
+url: ${[baseUrl]}/auth/google
+urlParameters: []

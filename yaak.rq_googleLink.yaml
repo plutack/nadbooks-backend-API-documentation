@@ -1,0 +1,61 @@
+type: http_request
+model: http_request
+id: rq_googleLink
+createdAt: 2026-03-19T12:00:00
+updatedAt: 2026-03-19T12:00:00
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_Sn8urEhUTK
+authentication:
+  disabled: false
+  token: ${[ bearerToken ]}
+authenticationType: bearer
+body:
+  text: |-
+    {
+      "token": "<GOOGLE_ID_TOKEN>"
+    }
+bodyType: application/json
+description: |-
+  Link a Google account to an authenticated user.
+
+  #### Auth: Requires JWT `accessToken` in Authorization header
+
+  #### Validation:
+  - User must have a password set (cannot link if Google is only auth)
+  - Google account email must match authenticated user's email
+  - Google account cannot already be linked to another user
+
+  #### Request Body
+  | Field  | Type   | Required | Description                    |
+  | :----- | :----- | :------- | :---------------------------- |
+  | `token` | `string` | Yes     | Google ID token (credential) |
+
+  #### Response Example
+  ```json
+  {
+    "message": "Google account linked successfully",
+    "user": {
+      "id": "uuid",
+      "username": "johndoe",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john@example.com",
+      "role": "USER",
+      "googleId": "google-sub-id"
+    }
+  }
+  ```
+
+  #### Error Responses
+  - 400: Google email doesn't match user email
+  - 409: Google account already linked or linked to another user
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Link Google Account
+sortPriority: 2.75
+url: ${[baseUrl]}/auth/google/link
+urlParameters: []

@@ -1,0 +1,37 @@
+type: http_request
+model: http_request
+id: rq_googleUnlink
+createdAt: 2026-03-19T12:00:00
+updatedAt: 2026-03-19T12:00:00
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_Sn8urEhUTK
+authentication:
+  disabled: false
+  token: ${[ bearerToken ]}
+authenticationType: bearer
+body: {}
+bodyType: null
+description: |-
+  Unlink Google account from an authenticated user.
+
+  #### Auth: Requires JWT `accessToken` in Authorization header
+
+  #### Validation:
+  - User must have a password set (use set-password endpoint first)
+  - Google account must be currently linked
+
+  #### Response Example
+  ```json
+  {
+    "message": "Google account unlinked successfully"
+  }
+  ```
+
+  #### Error Responses
+  - 400: No Google account linked OR no password set
+headers: []
+method: POST
+name: Unlink Google Account
+sortPriority: 2.7
+url: ${[baseUrl]}/auth/google/unlink
+urlParameters: []
