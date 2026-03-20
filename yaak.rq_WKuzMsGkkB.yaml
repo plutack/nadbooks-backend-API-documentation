@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_WKuzMsGkkB
 createdAt: 2026-01-03T08:11:31.064772801
-updatedAt: 2026-02-28T17:12:42.326220996
+updatedAt: 2026-03-20T15:50:38.829138041
 workspaceId: wk_aWSGCfNc2u
 folderId: fl_Sn8urEhUTK
 authentication: {}
@@ -12,8 +12,8 @@ body:
     {
       "firstName": "korede",
       "lastName": "salako",
-      "email": "salakotalut1@gmail.com",
-      "username": "tulips",
+      "email": "dev@talut.xyz",
+      "username": "tulips12",
       "password": "Dynamite@123"
     }
 bodyType: application/json
@@ -49,7 +49,8 @@ description: |-
       "role": "USER",
       "Wallet": {
         "balance": "0"
-      }
+      },
+      isVerified:true
     }
   }
   ```

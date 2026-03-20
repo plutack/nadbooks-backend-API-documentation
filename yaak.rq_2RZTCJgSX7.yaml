@@ -1,0 +1,26 @@
+type: http_request
+model: http_request
+id: rq_2RZTCJgSX7
+createdAt: 2026-03-20T14:55:24.374851017
+updatedAt: 2026-03-20T16:07:56.846465284
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_Sn8urEhUTK
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "email": "talut@resilience17.com"
+    }
+bodyType: application/json
+description: "Request a verification code to be sent to the user's email.\n\nRequest body \n\n```\n{\n  \"email\": \"dev@talut.xyz\"\n}\n```\n\n\n\n\n\n\n\n\n\nResponse body: 200\n\n```\n{\n  \"statusCode\": 409,\n  \"message\": \"Email already verified\",\n  \"errors\": [\n    \"Email already verified\"\n  ]\n}\n```\nResponse: 200\n{\n  \"statusCode\": 200,\n  \"message\": \"Success\",\n  \"errors\": null,\n  \"data\": {\n    \"message\": \"Verification code sent\"\n  }\n}\nRespinse body: 429\n```\n{\n  \"statusCode\": 429,\n  \"message\": \"Too many requests\",\n  \"errors\": [\n    \"Too many requests\"\n  ],\n  \"nextRetryIn\": 200\n}\n```\n\nResponse Body: 404\n```\n{\n  \"statusCode\": 404,\n  \"message\": \"User not found\",\n  \"errors\": [\n    \"User not found\"\n  ]\n}\n```"
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: NHia6BU2xh
+method: POST
+name: Request Verification
+sortPriority: -1774018524366.0
+url: ${[baseUrl]}/auth/request-verification
+urlParameters: []

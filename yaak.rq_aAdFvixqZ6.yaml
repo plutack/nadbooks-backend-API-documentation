@@ -1,0 +1,59 @@
+type: http_request
+model: http_request
+id: rq_aAdFvixqZ6
+createdAt: 2026-03-20T14:57:40.873670645
+updatedAt: 2026-03-20T15:34:38.408407338
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_Sn8urEhUTK
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "email": "talut@resilience17.com",
+      "code": "000010"
+    }
+bodyType: application/json
+description: |-
+  Verify a user's email with a 6-digit code.
+
+  request body
+  ```
+  {
+    "email": "talut@resilience17.com",
+    "code": "000000"
+  }
+  ```
+
+  Response: 200
+
+  ```
+  {
+    "statusCode": 200,
+    "message": "Success",
+    "errors": null,
+    "data": {
+      "message": "Email verified successfully"
+    }
+  }
+  ```
+  Response: 400
+  ```
+  {
+    "statusCode": 400,
+    "message": "Verification code expired or not found",
+    "errors": [
+      "Verification code expired or not found"
+    ]
+  }
+  ```
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: NHia6BU2xh
+method: POST
+name: Verify Email
+sortPriority: -1774018524365.999
+url: ${[baseUrl]}/auth/verify-email
+urlParameters: []
