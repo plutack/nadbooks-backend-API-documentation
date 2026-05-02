@@ -1,0 +1,72 @@
+type: http_request
+model: http_request
+id: rq_withdrawalInitiate03
+createdAt: 2026-04-14T06:00:00
+updatedAt: 2026-04-14T06:45:36.771877922
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_withdrawal001
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "amount": 500,
+      "method": "PAYSTACK",
+      "pin": "123456",
+      "accountNumber": "0000000000",
+      "accountName": "Test",
+      "bankCode": "057"
+    }
+bodyType: application/json
+description: |-
+  #### Initiate a Withdrawal
+
+  Withdraw BOOKS tokens to a bank account (Paystack) or crypto wallet.
+
+  - **Endpoint**: `POST /withdrawal`
+  - **Access**: Authenticated (JWT Bearer Token)
+
+  ##### Body Parameters (Common)
+
+  | Field   | Type   | Required | Description                        |
+  | :------ | :----- | :------- | :---------------------------------- |
+  | `amount` | `number` | Yes     | Amount to withdraw in BOOKS        |
+  | `method` | `string` | Yes     | `PAYSTACK` or `CRYPTO`             |
+  | `pin`    | `string` | Yes     | 6-digit transaction PIN             |
+
+  ##### Body Parameters (Paystack)
+
+  | Field           | Type   | Required | Description                     |
+  | :-------------- | :----- | :------- | :------------------------------ |
+  | `accountNumber` | `string` | Yes     | Nigerian bank account number    |
+  | `accountName`   | `string` | Yes     | Account holder name             |
+  | `bankCode`      | `string` | Yes     | Nigerian bank code              |
+
+  ##### Body Parameters (Crypto)
+
+  | Field          | Type   | Required | Description              |
+  | :------------- | :----- | :------- | :---------------------- |
+  | `walletAddress` | `string` | Yes    | Recipient crypto wallet |
+
+  ##### Response Example
+  ```json
+  {
+    "hash": "tst_abc123xyz"
+  }
+  ```
+
+  ##### Error Responses
+
+  - 400: Insufficient balance, invalid PIN, or validation error
+  - 401: Unauthorized
+  - 429: Too many failed PIN attempts (15 min lockout)
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Initiate Withdrawal
+sortPriority: 28.0
+url: ${[baseUrl]}/withdrawal/
+urlParameters: []

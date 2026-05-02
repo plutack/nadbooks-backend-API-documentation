@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_aAdFvixqZ6
 createdAt: 2026-03-20T14:57:40.873670645
-updatedAt: 2026-03-20T15:34:38.408407338
+updatedAt: 2026-04-08T20:34:58.553422740
 workspaceId: wk_aWSGCfNc2u
 folderId: fl_Sn8urEhUTK
 authentication: {}
@@ -54,6 +54,6 @@ headers:
   id: NHia6BU2xh
 method: POST
 name: Verify Email
-sortPriority: -1774018524365.999
+sortPriority: 604.9382716049382
 url: ${[baseUrl]}/auth/verify-email
 urlParameters: []

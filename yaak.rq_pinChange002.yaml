@@ -1,0 +1,48 @@
+type: http_request
+model: http_request
+id: rq_pinChange002
+createdAt: 2026-04-08T20:36:00
+updatedAt: 2026-04-08T20:35:24.318159731
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_Sn8urEhUTK
+authentication: {}
+authenticationType: bearer
+body:
+  text: |-
+    {
+      "oldPin": "123456",
+      "newPin": "654321"
+    }
+bodyType: application/json
+description: |-
+  Change the user's transaction PIN. Requires the current PIN.
+
+  #### Request Body
+
+  | Field     | Type   | Required | Description                           |
+  | :-------- | :----- | :------- | :----------------------------------- |
+  | `oldPin` | `string` | Yes     | Current 6-digit PIN                   |
+  | `newPin` | `string` | Yes     | New 6-digit PIN                       |
+
+  #### Response Example
+
+  ```json
+  {
+    "message": "Transaction PIN changed successfully"
+  }
+  ```
+
+  #### Error Responses
+
+  - 400: PIN not set (use /pin/set first)
+  - 400: Invalid current PIN
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Change Transaction PIN
+sortPriority: 802.4691358024692
+url: ${[baseUrl]}/auth/pin/change
+urlParameters: []

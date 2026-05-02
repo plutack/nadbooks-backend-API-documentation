@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_googleLink
 createdAt: 2026-03-19T12:00:00
-updatedAt: 2026-03-19T12:00:00
+updatedAt: 2026-04-08T20:35:33.227102694
 workspaceId: wk_aWSGCfNc2u
 folderId: fl_Sn8urEhUTK
 authentication:
@@ -56,6 +56,6 @@ headers:
   id: null
 method: POST
 name: Link Google Account
-sortPriority: 2.75
+sortPriority: 561.0425240054869
 url: ${[baseUrl]}/auth/google/link
 urlParameters: []

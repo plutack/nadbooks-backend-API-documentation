@@ -2,20 +2,22 @@ type: http_request
 model: http_request
 id: rq_mooBduF9F5
 createdAt: 2026-01-03T08:11:31.069103574
-updatedAt: 2026-01-03T13:18:22.665535953
+updatedAt: 2026-04-14T06:10:06.413873575
 workspaceId: wk_aWSGCfNc2u
 folderId: null
-authentication: {}
-authenticationType: null
+authentication:
+  disabled: false
+  token: ${[ secure(value=b64'WUVOQ19lVUUwYXpOdVF3RzhVR3RtQzBhRmFKTmpxQjlMYjNJRk5ySHVweWF6WnlSSFYzUFluSmt5djUwZGw4SlFZdkhqV1VGR3NqbXcwSXp4dTVxbXFnMVo5eDhSb01ibUcwVTBlVmJyZUhBVDBxaHV1M2x4TXZqaUU2NlJvWldwWWhQSWtGVUg0dHR6dWpsNDlzZk01R0Z4MWdodjNaUUFoUUdNZUdzLzN6U0t6eWZxUEVDcks1K0xPQnVCRUdDUUN3eDZ4RWg3VFhwN0xEenhmVWpxQkVXNFp3RVlGcytOYWZkNzNWWTJ6YTVQLytIUmNFYlFISmV4b0ZldmQ0dGprZVZ4') ]}
+authenticationType: bearer
 body:
-  text: |-
+  text: |
     {
-      "amount": "<number>",
-      "method": "<string>",
-      "accountNumber": "<string>",
-      "accountName": "<string>",
-      "bankCode": "<string>",
-      "walletAddress": "<string>"
+      "amount": 1000,
+      "method": "PAYSTACK",
+      "pin": "123456",
+      "accountNumber": "0365518263",
+      "accountName": "Talut Salako",
+      "bankCode": "058"
     }
 bodyType: application/json
 description: |2-
@@ -42,7 +44,20 @@ description: |2-
     "message": "Transfer initiated successfully",
     "data": { "reference": "TRF-123", "status": "pending" },
     "errors": null
+  },
+  ```
+
+
+  ```json
+  {
+    "statusCode": 201,
+    "message": "Success",
+    "errors": null,
+    "data": {
+      "hash": "0x75a7575eec10329ef39c445978ea3be99a05f0a5955933822413c12adde66ffe"
+    }
   }
+  ```
 headers:
 - enabled: true
   name: Content-Type

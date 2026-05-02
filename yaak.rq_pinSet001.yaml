@@ -1,0 +1,51 @@
+type: http_request
+model: http_request
+id: rq_pinSet001
+createdAt: 2026-04-08T20:35:00
+updatedAt: 2026-04-09T20:46:02.972609719
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_Sn8urEhUTK
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "pin": "123456"
+    }
+bodyType: application/json
+description: |-
+  Set a transaction PIN for the authenticated user. Requires email verification to be complete first.
+
+  #### Request Body
+
+  | Field | Type   | Required | Description                           |
+  | :---- | :----- | :------- | :----------------------------------- |
+  | `pin` | `string` | Yes    | 6-digit PIN (e.g., "123456")        |
+
+  #### Response Example
+
+  ```json
+  {
+    "statusCode": 200,
+    "message": "Success",
+    "errors": null,
+    "data": {
+      "message": "Transaction PIN set successfully"
+    }
+  }
+  ```
+
+  #### Error Responses
+
+  - 400: Email verification required before setting PIN
+  - 409: PIN already set (use /pin/change instead)
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Set Transaction PIN
+sortPriority: 703.7037037037037
+url: ${[baseUrl]}/auth/pin/set
+urlParameters: []

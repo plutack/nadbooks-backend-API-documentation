@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_2RZTCJgSX7
 createdAt: 2026-03-20T14:55:24.374851017
-updatedAt: 2026-03-20T16:07:56.846465284
+updatedAt: 2026-04-08T20:35:16.332476126
 workspaceId: wk_aWSGCfNc2u
 folderId: fl_Sn8urEhUTK
 authentication: {}
@@ -20,7 +20,7 @@ headers:
   value: application/json
   id: NHia6BU2xh
 method: POST
-name: Request Verification
-sortPriority: -1774018524366.0
+name: Request Email Verification
+sortPriority: 637.8600823045267
 url: ${[baseUrl]}/auth/request-verification
 urlParameters: []

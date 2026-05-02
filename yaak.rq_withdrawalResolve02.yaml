@@ -1,0 +1,59 @@
+type: http_request
+model: http_request
+id: rq_withdrawalResolve02
+createdAt: 2026-04-14T06:00:00
+updatedAt: 2026-04-14T06:44:36.387187863
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_withdrawal001
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "accountNumber": "0365518263",
+      "bankCode": "058"
+    }
+bodyType: null
+description: |-
+  #### Resolve Bank Account
+
+  Verify a Nigerian bank account and get the account holder's name. Used to confirm account details before initiating a withdrawal.
+
+  - **Endpoint**: `GET /withdrawal/resolve-bank`
+  - **Access**: Authenticated (JWT Bearer Token)
+
+  ##### Query Parameters
+
+  | Field           | Type     | Required | Description                |
+  | :-------------- | :------- | :------- | :-------------------------- |
+  | `accountNumber` | `string` | Yes      | Nigerian account number     |
+  | `bankCode`      | `string` | Yes      | Nigerian bank code (e.g., 058) |
+
+  ##### Response Example
+  ```json
+  {
+    "accountName": "John Doe"
+  }
+  ```
+
+  ##### Error Responses
+  - 400: Invalid account number or bank code
+  - 401: Unauthorized (missing/invalid JWT)
+headers: []
+method: GET
+name: Resolve Bank Account
+sortPriority: 29.0
+url: ${[baseUrl]}/withdrawal/resolve-bank
+urlParameters:
+- enabled: true
+  name: accountNumber
+  value: '0000000000'
+  id: qmmS9HR97s
+- enabled: true
+  name: bankCode
+  value: '057'
+  id: ZINRqkNuSV
+- enabled: true
+  name: ''
+  value: ''
+  id: Q5aNTMCNzB

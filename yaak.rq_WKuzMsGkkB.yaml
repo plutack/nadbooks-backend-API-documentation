@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_WKuzMsGkkB
 createdAt: 2026-01-03T08:11:31.064772801
-updatedAt: 2026-03-20T15:50:38.829138041
+updatedAt: 2026-04-08T20:34:22.135878827
 workspaceId: wk_aWSGCfNc2u
 folderId: fl_Sn8urEhUTK
 authentication: {}
@@ -61,6 +61,6 @@ headers:
   id: null
 method: POST
 name: Register a new user
-sortPriority: 1.0
+sortPriority: 0.0
 url: ${[baseUrl]}/auth/register
 urlParameters: []

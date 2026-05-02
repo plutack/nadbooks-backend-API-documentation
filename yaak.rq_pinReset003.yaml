@@ -1,0 +1,47 @@
+type: http_request
+model: http_request
+id: rq_pinReset003
+createdAt: 2026-04-08T20:37:00
+updatedAt: 2026-04-08T20:35:26.697829882
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_Sn8urEhUTK
+authentication: {}
+authenticationType: none
+body:
+  text: |-
+    {
+      "email": "talut@resilience17.com"
+    }
+bodyType: application/json
+description: |-
+  Request a transaction PIN reset code to be sent to the user's email.
+
+  #### Request Body
+
+  | Field  | Type   | Required | Description                           |
+  | :----- | :----- | :------- | :----------------------------------- |
+  | `email` | `string` | Yes    | User's email address                  |
+
+  #### Response Example
+
+  ```json
+  {
+    "message": "PIN reset code sent"
+  }
+  ```
+
+  #### Error Responses
+
+  - 404: User not found
+  - 400: Email verification required before resetting PIN
+  - 429: Too many requests (5 min cooldown)
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Request PIN Reset
+sortPriority: 868.3127572016461
+url: ${[baseUrl]}/auth/pin/reset
+urlParameters: []

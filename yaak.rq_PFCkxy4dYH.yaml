@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_PFCkxy4dYH
 createdAt: 2026-01-13T08:35:11.373626399
-updatedAt: 2026-01-13T08:42:39.305969272
+updatedAt: 2026-04-08T20:34:25.196580736
 workspaceId: wk_aWSGCfNc2u
 folderId: fl_Sn8urEhUTK
 authentication: {}
@@ -21,6 +21,6 @@ headers:
   id: kRECKXjBdS
 method: POST
 name: Refresh Access Token
-sortPriority: 2.0
+sortPriority: 333.3333333333333
 url: ${[ baseUrl ]}/auth/refresh
 urlParameters: []

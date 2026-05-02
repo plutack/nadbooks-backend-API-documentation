@@ -1,0 +1,36 @@
+type: http_request
+model: http_request
+id: rq_withdrawalBanks01
+createdAt: 2026-04-14T06:00:00
+updatedAt: 2026-04-14T06:00:00
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_withdrawal001
+authentication: {}
+authenticationType: none
+body: {}
+bodyType: null
+description: |-
+  #### Get List of Nigerian Banks
+
+  Returns a list of Nigerian banks with their names and codes for populating withdrawal dropdowns.
+
+  - **Endpoint**: `GET /withdrawal/banks`
+  - **Access**: Public
+
+  ##### Response Example
+  ```json
+  {
+    "banks": [
+      { "name": "Guarantee Trust Bank", "code": "058" },
+      { "name": "First Bank of Nigeria", "code": "011" }
+    ]
+  }
+  ```
+
+  **Note**: This endpoint is cached for 24 hours to improve performance.
+headers: []
+method: GET
+name: Get Banks List
+sortPriority: 30.0
+url: ${[baseUrl]}/api/withdrawal/banks
+urlParameters: []

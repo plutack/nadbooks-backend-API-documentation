@@ -1,0 +1,50 @@
+type: http_request
+model: http_request
+id: rq_pinResetConfirm004
+createdAt: 2026-04-08T20:38:00
+updatedAt: 2026-04-08T20:34:22.171809652
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_Sn8urEhUTK
+authentication: {}
+authenticationType: none
+body:
+  text: |-
+    {
+      "email": "talut@resilience17.com",
+      "code": "000000",
+      "newPin": "654321"
+    }
+bodyType: application/json
+description: |-
+  Confirm a transaction PIN reset with the code sent to email. Sets a new PIN.
+
+  #### Request Body
+
+  | Field    | Type   | Required | Description                           |
+  | :-------- | :----- | :------- | :----------------------------------- |
+  | `email`  | `string` | Yes     | User's email address                 |
+  | `code`   | `string` | Yes     | 6-digit reset code from email        |
+  | `newPin` | `string` | Yes     | New 6-digit PIN                       |
+
+  #### Response Example
+
+  ```json
+  {
+    "message": "Transaction PIN reset successfully"
+  }
+  ```
+
+  #### Error Responses
+
+  - 400: Reset code expired or not found
+  - 401: Invalid reset code
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Confirm PIN Reset
+sortPriority: 1000.0
+url: ${[baseUrl]}/auth/pin/reset/confirm
+urlParameters: []

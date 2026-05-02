@@ -1,0 +1,13 @@
+type: folder
+model: folder
+id: fl_withdrawal001
+createdAt: 2026-04-14T06:00:00
+updatedAt: 2026-04-14T06:00:00
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_T4MtiwMhZT
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: withdrawal
+sortPriority: 24.0

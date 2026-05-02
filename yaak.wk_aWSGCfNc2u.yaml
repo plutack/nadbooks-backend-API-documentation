@@ -2,10 +2,10 @@ type: workspace
 model: workspace
 id: wk_aWSGCfNc2u
 createdAt: 2026-01-03T08:11:31.064445937
-updatedAt: 2026-01-24T17:46:04.719489499
+updatedAt: 2026-04-09T20:15:28.637333153
 authentication:
   disabled: false
-  token: ${[bearerToken]}
+  token: ${[ response.body.path(request='rq_xpAMzYFKTm', behavior='smart', ttl='0', result='first', join=b64'LCA', path=b64'JC5kYXRhLmFjY2Vzc1Rva2Vu') ]}
 authenticationType: bearer
 description: API documentation for Nadbooks Backend
 headers: []
