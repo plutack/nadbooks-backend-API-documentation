@@ -1,0 +1,30 @@
+type: http_request
+model: http_request
+id: rq_admin_genres_rename
+createdAt: 2026-06-06T10:00:00
+updatedAt: 2026-06-06T10:00:00
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_genres_admin
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "name": "Science Fiction"
+    }
+bodyType: application/json
+description: Rename a genre. Because books reference the genre by id, the change applies everywhere. Requires ADMIN+.
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: PATCH
+name: Rename genre
+sortPriority: 3.0
+url: ${[baseUrl]}/admin/genres/:id
+urlParameters:
+- enabled: true
+  name: :id
+  value: <uuid>
+  id: null

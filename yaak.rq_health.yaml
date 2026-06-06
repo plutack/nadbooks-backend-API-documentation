@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_health
+createdAt: 2026-06-06T08:30:00
+updatedAt: 2026-06-06T08:30:00
+workspaceId: wk_aWSGCfNc2u
+folderId: null
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: |-
+  Liveness/readiness probe. Returns `200` with `{ status, db, redis }` when both dependencies are up, or `503` when either is down. Exempt from rate limiting.
+
+  ```json
+  { "status": "ok", "db": "up", "redis": "up" }
+  ```
+headers: []
+method: GET
+name: Health check
+sortPriority: 0.0
+url: ${[baseUrl]}/health
+urlParameters: []

@@ -1,0 +1,32 @@
+type: http_request
+model: http_request
+id: rq_admin_user_rolehist
+createdAt: 2026-06-06T08:00:00
+updatedAt: 2026-06-06T08:00:00
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_cd3YF8aonm
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: |-
+  Returns the audit trail of role changes for a user (most recent first), including who made each change.
+
+  Requires ADMIN or SUPER_ADMIN.
+
+  #### Response Example
+  ```json
+  [
+    { "fromRole": "USER", "toRole": "ADMIN", "createdAt": "...", "changedBy": { "id": "...", "username": "root" } }
+  ]
+  ```
+headers: []
+method: GET
+name: Get user role history
+sortPriority: 30.0
+url: ${[baseUrl]}/admin/users/:id/role-history
+urlParameters:
+- enabled: true
+  name: :id
+  value: <uuid>
+  id: null

@@ -1,0 +1,32 @@
+type: http_request
+model: http_request
+id: rq_admin_stats
+createdAt: 2026-06-06T09:00:00
+updatedAt: 2026-06-06T09:00:00
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_6f5CBhWZYt
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: |-
+  Aggregate platform metrics for the admin dashboard: user/book/order/transaction counts by status, plus paid-order revenue.
+
+  Requires ADMIN or SUPER_ADMIN.
+
+  #### Response Example
+  ```json
+  {
+    "users": { "total": 0, "verified": 0, "active": 0, "admins": 0 },
+    "books": { "total": 0, "deleted": 0, "pendingReview": 0, "approved": 0, "rejected": 0 },
+    "orders": { "total": 0, "PENDING": 0, "PAID": 0, "COMPLETED": 0, "FAILED": 0, "CANCELLED": 0 },
+    "transactions": { "total": 0, "PENDING": 0, "SUCCESS": 0, "FAILED": 0 },
+    "revenue": { "paidOrdersTotal": 0 }
+  }
+  ```
+headers: []
+method: GET
+name: Get dashboard stats
+sortPriority: 5.0
+url: ${[baseUrl]}/admin/stats
+urlParameters: []

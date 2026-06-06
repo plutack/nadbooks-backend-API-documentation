@@ -1,0 +1,22 @@
+type: http_request
+model: http_request
+id: rq_admin_genres_delete
+createdAt: 2026-06-06T10:00:00
+updatedAt: 2026-06-06T10:00:00
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_genres_admin
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: Delete a genre. **Blocked with 409 if any book still uses it** (the message says how many). Requires ADMIN+.
+headers: []
+method: DELETE
+name: Delete genre
+sortPriority: 4.0
+url: ${[baseUrl]}/admin/genres/:id
+urlParameters:
+- enabled: true
+  name: :id
+  value: <uuid>
+  id: null

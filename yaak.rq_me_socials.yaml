@@ -1,0 +1,43 @@
+type: http_request
+model: http_request
+id: rq_me_socials
+createdAt: 2026-06-06T08:00:00
+updatedAt: 2026-06-06T08:00:00
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_9FBADt3LvS
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "instagram": "https://instagram.com/<handle>",
+      "twitter": "https://x.com/<handle>",
+      "facebook": "https://facebook.com/<handle>"
+    }
+bodyType: application/json
+description: |-
+  Sets or clears the authenticated user's social media links. Each link is validated against its platform's URL pattern. Pass an empty string to remove a link.
+
+  #### Request Body
+  | Field      | Type   | Required | Description                                  |
+  | :--------- | :----- | :------- | :------------------------------------------- |
+  | `instagram` | `string` | No | Must be an instagram.com URL.            |
+  | `twitter`   | `string` | No | Must be a twitter.com / x.com URL.       |
+  | `facebook`  | `string` | No | Must be a facebook.com / fb.com URL.     |
+
+  #### Response Example
+  ```json
+  [
+    { "platform": "INSTAGRAM", "url": "https://instagram.com/jane" }
+  ]
+  ```
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: PATCH
+name: Update social links
+sortPriority: 6.0
+url: ${[baseUrl]}/me/socials
+urlParameters: []

@@ -2,7 +2,7 @@ type: workspace
 model: workspace
 id: wk_aWSGCfNc2u
 createdAt: 2026-01-03T08:11:31.064445937
-updatedAt: 2026-04-09T20:15:28.637333153
+updatedAt: 2026-06-06T06:58:00.844968455
 authentication:
   disabled: false
   token: ${[ response.body.path(request='rq_xpAMzYFKTm', behavior='smart', ttl='0', result='first', join=b64'LCA', path=b64'JC5kYXRhLmFjY2Vzc1Rva2Vu') ]}
@@ -10,7 +10,7 @@ authenticationType: bearer
 description: API documentation for Nadbooks Backend
 headers: []
 name: nadbooks backend API
-encryptionKeyChallenge: eUE0azNuQwE8Hb2JHBIu38PSqKpfPAzrypo+3ihMXEfQt3piANTrfU8NT0ko2xCU30aq/HpZ/aV4YMy5cmidAfG04QWDgYbohuBe4zxryWjwBcHtMm31j9NIm3tdzRsj7r8=
+encryptionKeyChallenge: null
 settingValidateCertificates: true
 settingFollowRedirects: true
 settingRequestTimeout: 0

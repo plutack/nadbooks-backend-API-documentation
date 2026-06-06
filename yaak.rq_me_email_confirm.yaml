@@ -1,0 +1,37 @@
+type: http_request
+model: http_request
+id: rq_me_email_confirm
+createdAt: 2026-06-06T08:30:00
+updatedAt: 2026-06-06T08:30:00
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_9FBADt3LvS
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "code": "123456"
+    }
+bodyType: application/json
+description: |-
+  Completes the email change using the code sent to the new address. Updates the email, marks it verified, and returns fresh tokens (the email is in the JWT).
+
+  #### Request Body
+  | Field   | Type   | Required | Description           |
+  | :------ | :----- | :------- | :-------------------- |
+  | `code`   | `string` | Yes    | 6-digit code.         |
+
+  #### Response Example
+  ```json
+  { "message": "Email updated successfully", "accessToken": "...", "refreshToken": "...", "user": { } }
+  ```
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Confirm email change
+sortPriority: 9.0
+url: ${[baseUrl]}/me/email/confirm
+urlParameters: []

@@ -1,0 +1,39 @@
+type: http_request
+model: http_request
+id: rq_me_avatar
+createdAt: 2026-06-06T08:00:00
+updatedAt: 2026-06-06T08:00:00
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_9FBADt3LvS
+authentication: {}
+authenticationType: null
+body:
+  form:
+  - enabled: true
+    name: avatar
+    value: ''
+bodyType: multipart/form-data
+description: |-
+  Uploads a profile picture. The image is content-validated (Magika), resized/optimized, and stored in the public bucket.
+
+  ## Request Type
+  multipart/form-data
+
+  | Field   | Type | Required | Description           |
+  | :------ | :--- | :------- | :-------------------- |
+  | `avatar` | File | Yes      | Image (jpeg/png/webp). |
+
+  #### Response Example
+  ```json
+  { "avatarURL": "https://cdn.nadbooks.com/avatars/...jpg" }
+  ```
+headers:
+- enabled: true
+  name: Content-Type
+  value: multipart/form-data
+  id: null
+method: POST
+name: Upload profile picture
+sortPriority: 7.0
+url: ${[baseUrl]}/me/avatar
+urlParameters: []

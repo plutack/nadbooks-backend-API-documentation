@@ -1,0 +1,13 @@
+type: folder
+model: folder
+id: fl_genres_pub
+createdAt: 2026-06-06T10:00:00
+updatedAt: 2026-06-06T10:00:00
+workspaceId: wk_aWSGCfNc2u
+folderId: null
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: genres
+sortPriority: 15.0

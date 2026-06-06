@@ -1,0 +1,23 @@
+type: http_request
+model: http_request
+id: rq_genres_list
+createdAt: 2026-06-06T10:00:00
+updatedAt: 2026-06-06T10:00:00
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_genres_pub
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: |-
+  Public list of all genres (alphabetical) for the upload form and book filters.
+
+  ```json
+  [ { "id": "uuid", "name": "Fiction" } ]
+  ```
+headers: []
+method: GET
+name: List genres
+sortPriority: 1.0
+url: ${[baseUrl]}/genres
+urlParameters: []

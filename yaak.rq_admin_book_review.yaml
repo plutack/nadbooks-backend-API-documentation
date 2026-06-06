@@ -1,0 +1,38 @@
+type: http_request
+model: http_request
+id: rq_admin_book_review
+createdAt: 2026-06-06T08:00:00
+updatedAt: 2026-06-06T08:00:00
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_yZ6CmXp3zY
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "status": "APPROVED"
+    }
+bodyType: application/json
+description: |-
+  Admin review decision for a pending book. Records the reviewer and timestamp and sets the book's status.
+
+  #### Request Body
+  | Field   | Type   | Required | Description                |
+  | :------ | :----- | :------- | :------------------------- |
+  | `status` | `string` | Yes    | `APPROVED` or `REJECTED`.  |
+
+  Requires ADMIN or SUPER_ADMIN.
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: PATCH
+name: Review a book (approve/reject)
+sortPriority: 30.0
+url: ${[baseUrl]}/admin/books/:id/review
+urlParameters:
+- enabled: true
+  name: :id
+  value: <uuid>
+  id: null

@@ -1,0 +1,34 @@
+type: http_request
+model: http_request
+id: rq_book_download
+createdAt: 2026-06-06T08:00:00
+updatedAt: 2026-06-06T08:00:00
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_6L6h7JtEkT
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: |-
+  Returns a **short-lived presigned URL** to download the book's file.
+
+  Access is restricted to: the book's author, an admin, or a user who has a paid/completed order containing the book. Anyone else receives `403`.
+
+  #### Response Example
+  ```json
+  {
+    "url": "https://<bucket>.r2.cloudflarestorage.com/books/...?X-Amz-...",
+    "expiresIn": 300
+  }
+  ```
+  The `url` is valid for `expiresIn` seconds (default 300).
+headers: []
+method: GET
+name: Get book download link
+sortPriority: 20.0
+url: ${[baseUrl]}/books/:id/download
+urlParameters:
+- enabled: true
+  name: :id
+  value: <uuid>
+  id: null

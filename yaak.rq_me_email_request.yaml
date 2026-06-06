@@ -1,0 +1,34 @@
+type: http_request
+model: http_request
+id: rq_me_email_request
+createdAt: 2026-06-06T08:30:00
+updatedAt: 2026-06-06T08:30:00
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_9FBADt3LvS
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "newEmail": "new@example.com"
+    }
+bodyType: application/json
+description: |-
+  Starts an email change by sending a 6-digit verification code to the **new** address. The email is not changed until confirmed.
+
+  #### Request Body
+  | Field      | Type   | Required | Description        |
+  | :--------- | :----- | :------- | :----------------- |
+  | `newEmail`  | `string` | Yes    | The new email.     |
+
+  Rate limited; re-requests within 5 minutes return `429` with `nextRetryIn`.
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Request email change
+sortPriority: 8.0
+url: ${[baseUrl]}/me/email/request-change
+urlParameters: []

@@ -1,0 +1,31 @@
+type: http_request
+model: http_request
+id: rq_admin_genres_create
+createdAt: 2026-06-06T10:00:00
+updatedAt: 2026-06-06T10:00:00
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_genres_admin
+authentication: {}
+authenticationType: null
+body:
+  text: |-
+    {
+      "name": "Fiction"
+    }
+bodyType: application/json
+description: |-
+  Create a new genre. Name must be unique (409 otherwise). Requires ADMIN+.
+
+  | Field | Type | Required |
+  | :---- | :--- | :------- |
+  | name  | string | Yes |
+headers:
+- enabled: true
+  name: Content-Type
+  value: application/json
+  id: null
+method: POST
+name: Create genre
+sortPriority: 2.0
+url: ${[baseUrl]}/admin/genres
+urlParameters: []

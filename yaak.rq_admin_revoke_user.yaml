@@ -1,0 +1,27 @@
+type: http_request
+model: http_request
+id: rq_admin_revoke_user
+createdAt: 2026-06-06T08:00:00
+updatedAt: 2026-06-06T08:00:00
+workspaceId: wk_aWSGCfNc2u
+folderId: fl_cd3YF8aonm
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: |-
+  Revokes ALL of a user's refresh tokens, forcing them to log in again everywhere. Implemented via a per-user revocation epoch.
+
+  Note: already-issued access JWTs remain valid until they expire (~15m).
+
+  Requires ADMIN or SUPER_ADMIN.
+headers: []
+method: POST
+name: Revoke user sessions (force logout)
+sortPriority: 31.0
+url: ${[baseUrl]}/admin/users/:id/revoke-sessions
+urlParameters:
+- enabled: true
+  name: :id
+  value: <uuid>
+  id: null
